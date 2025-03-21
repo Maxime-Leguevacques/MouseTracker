@@ -12,15 +12,12 @@ void TrackMousePosition()
         if (GetCursorPos(&p))
         {
             // Move the cursor to the top left corner of the console
-            std::cout << "\rMouse Position: X = " << p.x << ", Y = " << p.y << std::flush;
+            std::cout << "Mouse Position: X = " << p.x << ", Y = " << p.y << std::endl;
         }
         else
         {
-            std::cout << "\rFailed to get mouse position" << std::flush;
+            std::cout << "Failed to get mouse position" << std::flush;
         }
-
-        // Sleep for a short time to avoid overwhelming the output
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 }
 
